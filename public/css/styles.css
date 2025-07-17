@@ -210,6 +210,40 @@ body {
   color: var(--s-background);
 }
 
+/* Details page styling */
+.vehicle-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.vehicle-detail .vehicle-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.vehicle-detail .vehicle-info {
+  flex: 1;
+  max-width: 600px;
+}
+
+.vehicle-info h2, .vehicle-info h3 {
+  margin-top: 0;
+}
+
+.vehicle-info ul {
+  list-style: none;
+  padding: 0;
+}
+.vehicle-info li {
+  margin-bottom: 0.5rem;
+}
+
+
 @media screen and (min-width: 768px) {
   body {
     background: url('../images/site/checkerboard.jpg');
