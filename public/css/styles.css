@@ -65,7 +65,14 @@ body {
 }
 #wrapper nav li {
   color: var(--white);
-  font-size: 20px;
+  font-size: 14px;
+}
+#wrapper nav li a {
+  color: var(--white);
+  text-decoration: none;
+}
+#wrapper nav li a:hover {
+  color: var(--highlight);
 }
 
 /* Hero Section */
@@ -243,6 +250,109 @@ body {
   margin-bottom: 0.5rem;
 }
 
+/* Form container */
+.form {
+  margin: auto;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.form .form-group {
+  margin-bottom: 1.2rem;
+}
+.form .form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 16px;
+  color: var(--s-background);
+}
+.form .form-input {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 300;
+  border: 1.5px solid var(--ash);
+  color: var(--s-background);
+  transition: border-color 0.25s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form .form-input:focus {
+  outline: none;
+  border-color: var(--highlight); 
+}
+.form .checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+  user-select: none;
+  color: var(--s-background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form .checkbox-input {
+  cursor: pointer;
+}
+.form .form-hint {
+  display: block;
+  margin-top: 10px;
+  font-size: 14x;
+  color: var(--s-background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form  .btn {
+  width: 100%;
+  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.25s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form .btn-primary {
+  background-color: var(--p-background);
+  color: var(--white);
+}
+.form .btn-primary:hover,
+.form .btn-primary:focus {
+  background-color: var(--highlight);
+  outline: none;
+}
+
+/* Error list */
+.error-list {
+  padding: 5px 10px;
+  margin-bottom: 1.5rem;
+  color: var(--highlight);
+  list-style-type: disc;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Register link container */
+.register {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--s-background);
+  text-align: center;
+}
+
+.register .link {
+  font-size: 14px;
+  color: var(--p-background);
+  text-decoration: none;
+}
+
+.register .link:hover,
+.register .link:focus {
+  text-decoration: underline;
+}
 
 @media screen and (min-width: 768px) {
   body {
@@ -295,5 +405,9 @@ body {
 
   #inv-display {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .form {
+    max-width: 420px;
   }
 }
