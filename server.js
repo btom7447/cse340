@@ -12,6 +12,7 @@ const app = express()
 const static = require("./routes/static")
 const baseController = require("./controllers/baseController")
 const inventoryRoute = require("./routes/inventoryRoutes")
+const appointmentRoute = require("./routes/appointmentRoute");
 const utilities = require("./utilities/index")
 const session = require('express-session');
 const pool = require('./database/');
@@ -24,7 +25,8 @@ const cookieParser = require("cookie-parser")
  *************************/
 app.set("view engine", "ejs")
 app.use(expressLayouts)
-app.set("layout", "./layouts/layout") // not at views root
+app.set("layout", "./layouts/layout")
+app.set("views", "./views")
 
 
 /* ***********************
@@ -71,6 +73,8 @@ app.use("/inv", inventoryRoute)
 // Account Route
 app.use("/account", accountRoute)
 
+//Appointment Route
+app.use("/appointments", appointmentRoute);
 
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {

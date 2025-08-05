@@ -44,3 +44,13 @@ UPDATE inventory
 SET 
   inv_image = REPLACE(inv_image, '/images/', '/images/vehicles/'),
   inv_thumbnail = REPLACE(inv_thumbnail, '/images/', '/images/vehicles/');
+
+-- Book Appointment 
+CREATE TABLE appointments (
+  appointment_id SERIAL PRIMARY KEY,
+  account_id INT REFERENCES account(account_id),
+  date DATE NOT NULL,
+  time TIME NOT NULL,
+  purpose TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

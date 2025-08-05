@@ -36,6 +36,15 @@
         Update Your Account Information
       </a>
 
+      <% if (accountData.account_type !== "Employee" && accountData.account_type !== "Admin") { %>
+        <div class="management-section">
+          <h2>Need to meet with our staffs?</h2>
+          <a href="/appointments/book" class="btn btn-primary">
+            Book an Appointment
+          </a>
+        </div>
+      <% } %> 
+
       <% if (accountData.account_type === "Employee" || accountData.account_type === "Admin") { %>
         <div class="management-section">
           <h3>Inventory Management</h3>

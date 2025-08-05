@@ -1,0 +1,28 @@
+<h1>Book an Appointment</h1>
+<form action="/appointments/book" method="POST" class="form">
+    <div class="form-group">
+        <label for="booking_date">Date</label>
+        <input type="date" name="booking_date" id="booking_date" required class="form-input">
+    </div>
+
+    <div class="form-group">
+        <label for="booking_time">Time</label>
+        <input type="time" name="booking_time" id="booking_time" class="form-input">
+    </div>
+
+    <div class="form-group">
+        <label for="booking_purpose">Purpose</label>
+        <textarea name="booking_purpose" id="booking_purpose" required class="form-input"></textarea>
+    </div>
+<!--    
+    <label>Date:</label>
+    <input type="date" name="date" required>
+    
+    <label>Time:</label>
+    <input type="time" name="time" required>
+    
+    <label>Purpose:</label>
+    <textarea name="purpose" required></textarea> -->
+
+    <button type="submit" class="btn btn-primary">Book</button>
+</form>

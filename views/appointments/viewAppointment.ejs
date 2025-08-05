@@ -1,0 +1,6 @@
+<h1>Your Appointments</h1>
+<ul>
+  <% appointments.forEach(app => { %>
+    <li><%= app.date %> @ <%= app.time %> - <%= app.purpose %></li>
+  <% }) %>
+</ul>
